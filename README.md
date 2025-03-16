@@ -1,7 +1,7 @@
 # TLDR
-This is a modification of ckkissane's implementation of crosscoders https://github.com/ckkissane/crosscoder-model-diff-replication for understanding how specific chat behavior arises from the base model. See details here.
+This is a modification of ckkissane's implementation of crosscoders https://github.com/ckkissane/crosscoder-model-diff-replication for understanding how specific chat behavior arises from the base model. See details [here](https://github.com/ARBORproject/arborproject.github.io/discussions/23). For the visualizations inside this project, you should use this modified version of [sae-vis](github.com/aranguri/crosscoder-sae-vis).
 
-I am working through organizing and documenting this code. For visualization, you should use this modified version of [sae-vis](github.com/aranguri/crosscoder-sae-vis).
+I am still working through organizing and documenting this code. I will upload the trained modified crosscoder soon.
 
 # Reading This Codebase
 
