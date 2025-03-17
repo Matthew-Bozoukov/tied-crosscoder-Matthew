@@ -195,3 +195,9 @@ def load_pile_lmsys_mixed_tokens():
         torch.save(all_tokens, "data/pile-lmsys-mix-1m-tokenized-gemma-2.pt")
         print(f"Saved tokens to disk")
     return all_tokens
+
+def load_pile_tokens():
+    return torch.load('datasets/pile_1m_tokens.pt')
+
+def load_lmsys_tokens():
+    return torch.load('datasets/lmsys_1m_tokens.pt')

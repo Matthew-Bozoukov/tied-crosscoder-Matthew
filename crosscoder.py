@@ -204,10 +204,14 @@ class CrossCoder(nn.Module):
         return instance
 
     @classmethod
-    def load(cls, version_dir, checkpoint_version):
-        save_dir = Path("checkpoints") / str(version_dir)
-        cfg_path = save_dir / f"{str(checkpoint_version)}_cfg.json"
-        weight_path = save_dir / f"{str(checkpoint_version)}.pt"
+    def load(cls, full_name, version_dir=None, checkpoint_version=None):
+        if not full_name:
+            save_dir = Path("checkpoints") / str(version_dir)
+            cfg_path = save_dir / f"{str(checkpoint_version)}_cfg.json"
+            weight_path = save_dir / f"{str(checkpoint_version)}.pt"
+        else:
+            cfg_path = Path("checkpoints") / f"{full_name}_cfg.json"
+            weight_path = Path("checkpoints") / f"{full_name}.pt"
 
         cfg = json.load(open(cfg_path, "r"))
         pprint.pprint(cfg)
